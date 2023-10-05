@@ -37,7 +37,7 @@ var BellIconSVG := GetFeatherIcon('bell', 24); // Returns SVG Code with Width/He
 ### SVG Path Data
 
 ```pascal
-uses uBootstrapIcons
+uses uFeatherIcons
 
 ...
 
