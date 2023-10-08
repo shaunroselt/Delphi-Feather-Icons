@@ -24,14 +24,20 @@ uses uFeatherIcons
 
 ...
 
+// Returns SVG Code
+var HomeIconSVG := GetFeatherIcon('home');
+var TelevisionIconSVG := GetFeatherIcon('tv');
+var BellIconSVG := GetFeatherIcon('bell');
 
-var HomeIconSVG := GetFeatherIcon('home'); // Returns SVG Code
-var TelevisionIconSVG := GetFeatherIcon('tv'); // Returns SVG Code
-var BellIconSVG := GetFeatherIcon('bell'); // Returns SVG Code
+// Returns SVG Code with Width/Height set to 24
+var HomeIconSVG := GetFeatherIcon('home', 24);
+var TelevisionIconSVG := GetFeatherIcon('tv', 24);
+var BellIconSVG := GetFeatherIcon('bell', 24);
 
-var HomeIconSVG := GetFeatherIcon('home', 24); // Returns SVG Code with Width/Height set to 24
-var TelevisionIconSVG := GetFeatherIcon('tv', 24); // Returns SVG Code with Width/Height set to 24
-var BellIconSVG := GetFeatherIcon('bell', 24); // Returns SVG Code with Width/Height set to 24
+// Returns SVG Code with Width/Height set to 24 and color set to purple (#800080):
+var HomeIconSVG := GetFeatherIcon('home', 24, 'purple');
+var TelevisionIconSVG := GetFeatherIcon('tv', 24, '#800080');
+var BellIconSVG := GetFeatherIcon('bell', 24, 'purple');
 ```
 
 ### SVG Path Data
@@ -41,14 +47,20 @@ uses uFeatherIcons
 
 ...
 
+// Returns SVG Path Data Text:
+var HomeIconSVGPathData := GetFeatherIconPathData('home');
+var TelevisionIconSVGPathData := GetFeatherIconPathData('tv');
+var BellIconSVGPathData := GetFeatherIconPathData('bell');
 
-var HomeIconSVGPathData := GetFeatherIconPathData('home'); // Returns SVG Path Data Text
-var TelevisionIconSVGPathData := GetFeatherIconPathData('tv'); // Returns SVG Path Data Text
-var BellIconSVGPathData := GetFeatherIconPathData('bell'); // Returns SVG Path Data Text
+// Returns SVG Path Data Text with Width/Height set to 24:
+var HomeIconSVGPathData := GetFeatherIconPathData('home', 24);
+var TelevisionIconSVGPathData := GetFeatherIconPathData('tv', 24);
+var BellIconSVGPathData := GetFeatherIconPathData('bell', 24);
 
-var HomeIconSVGPathData := GetFeatherIconPathData('home', 24); // Returns SVG Path Data Text with Width/Height set to 24
-var TelevisionIconSVGPathData := GetFeatherIconPathData('tv', 24); // Returns SVG Path Data Text with Width/Height set to 24
-var BellIconSVGPathData := GetFeatherIconPathData('bell', 24); // Returns SVG Path Data Text with Width/Height set to 24
+// Returns SVG Path Data Text with Width/Height set to 24 and color set to purple (#800080):
+var HomeIconSVGPathData := GetFeatherIconPathData('home', 24, 'purple'); 
+var TelevisionIconSVGPathData := GetFeatherIconPathData('tv', 24, '#800080'); 
+var BellIconSVGPathData := GetFeatherIconPathData('bell', 24, 'purple'); 
 ```
 
 Other ways to use Feather Icons: [https://github.com/feathericons/feather](https://github.com/feathericons/feather)
