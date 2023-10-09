@@ -5,9 +5,12 @@ interface
 
 uses
   System.SysUtils
-  {$IFNDEF WEBLIB}
+  {$IFDEF WEBLIB}
+    , Web
+  {$ELSE}
     , System.RegularExpressions
-  {$IFEND}
+    , System.NetEncoding
+  {$ENDIF}
 ;
 
 type
@@ -19,7 +22,8 @@ type
 function GetFeatherIcon(IconName: String; IconSize: Cardinal = 16; HTMLColor: String = ''): String;
 {$IFNDEF WEBLIB}
 function GetFeatherIconPathData(IconName: String; IconSize: Cardinal = 16;  HTMLColor: String = ''): String;
-{$IFEND}
+{$ENDIF}
+function GetFeatherIconBase64(IconName: String; IconSize: Cardinal = 16; HTMLColor: String = ''): String;
 
 
 const
@@ -1525,7 +1529,7 @@ begin
     Result := PathData;
   end;
 end;
-{$IFEND}
+{$ENDIF}
 
 function GetFeatherIcon(IconName: String; IconSize: Cardinal; HTMLColor: String): String;
 var
@@ -1540,6 +1544,16 @@ begin
         Result := StringReplace(Result, 'currentColor', HTMLColor, [rfReplaceAll]);
       Exit;
     end;
+end;
+
+function GetFeatherIconBase64(IconName: String; IconSize: Cardinal; HTMLColor: String): String;
+begin
+  Result := '';
+  {$IFDEF WEBLIB}
+    Result := 'data:image/svg+xml;base64,' + window.btoa(GetFeatherIcon(IconName, IconSize, HTMLColor));
+  {$ELSE}
+    Result := 'data:image/svg+xml;base64,' + TNetEncoding.Base64.Encode(GetFeatherIcon(IconName, IconSize, HTMLColor));
+  {$ENDIF}
 end;
 
 end.

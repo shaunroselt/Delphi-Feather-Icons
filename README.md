@@ -63,6 +63,29 @@ var TelevisionIconSVGPathData := GetFeatherIconPathData('tv', 24, '#800080');
 var BellIconSVGPathData := GetFeatherIconPathData('bell', 24, 'purple'); 
 ```
 
+### SVG Base64 Image
+
+```pascal
+uses uFeatherIcons
+
+...
+
+// Returns SVG Base64 Image
+var HomeIconSVGBase64 := GetFeatherIconBase64('home');
+var TelevisionIconSVGBase64 := GetFeatherIconBase64('tv');
+var BellIconSVGBase64 := GetFeatherIconBase64('bell');
+
+// Returns SVG Base64 Image with Width/Height set to 24
+var HomeIconSVGBase64 := GetFeatherIconBase64('home', 24);
+var TelevisionIconSVGBase64 := GetFeatherIconBase64('tv', 24);
+var BellIconSVGBase64 := GetFeatherIconBase64('bell', 24);
+
+// Returns SVG Base64 Image with Width/Height set to 24 and color set to purple (#800080):
+var HomeIconSVGBase64 := GetFeatherIconBase64('home', 24, 'purple');
+var TelevisionIconSVGBase64 := GetFeatherIconBase64('tv', 24, '#800080');
+var BellIconSVGBase64 := GetFeatherIconBase64('bell', 24, 'purple');
+```
+
 Other ways to use Feather Icons: [https://github.com/feathericons/feather](https://github.com/feathericons/feather)
 
 ## License
