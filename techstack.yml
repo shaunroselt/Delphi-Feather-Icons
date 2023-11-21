@@ -1,12 +1,21 @@
 repo_name: shaunroselt/Delphi-Feather-Icons
-report_id: f90b9417581c69bc7e4ba154ecf31fed
+report_id: fbaef7694c277e6dfa07be8d5f089dd2
 repo_type: Public
-timestamp: '2023-11-09T13:44:14+00:00'
+timestamp: '2023-11-21T09:34:30+00:00'
 requested_by: shaunroselt
 provider: github
 branch: main
-detected_tools_count: 1
+detected_tools_count: 2
 tools:
+- name: Pascal
+  description: An imperative and procedural programming language
+  website_url: https://en.wikipedia.org/wiki/Pascal_(programming_language)
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/25462/default_b93b3ffaf8650f0584d7b2e14dd145f599722cae.png
+  detection_source: Repo Metadata
 - name: Git
   description: Fast, scalable, distributed revision control system
   website_url: http://git-scm.com/
